@@ -1,0 +1,28 @@
+.header{
+    width: 30%;
+    margin: 0 auto;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.ul-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+}
+.nav{
+    width: 70%;
+}
+.ul-list li .link{
+    text-decoration: none !important;
+    color: #ccc;
+    text-align: center;
+    font-weight: 500;
+}
