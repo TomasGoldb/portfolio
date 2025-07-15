@@ -85,3 +85,36 @@
     color: #0dd40d;
     font-weight: 600;
 }
+
+.yo-section{
+  border: 1px solid #c7c7c7;
+  width: 80%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-around;
+  align-items: center;
+}
+.yo-section h2{
+  color: #ffffff;
+}
+.yo-section p{
+  color: #ffffff;
+}
+.yo-texto{
+  width: 50%;
+}
+
+.foto-yo{
+  width: 40%;
+}
+.mis-proyectos-section{
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 4%;
+  width: 80%;
+}
