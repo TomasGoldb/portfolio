@@ -1,4 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Denk+One&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Geist:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap');
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background: #181818;
+  color: #f3f3f3;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  padding-top: 70px; /* espacio para el header fijo */
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Poppins', Arial, sans-serif;
+  margin-top: 0;
+}
 
 
 *{
@@ -16,4 +32,54 @@
       align-items: center;
       align-content: center;
       justify-content: center;
+}
+
+/* Footer styles */
+.footer {
+  width: 100%;
+  background: #181818;
+  color: #fff;
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
+.footer-links a {
+  color: #0dd40d;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.footer-links a:hover {
+  color: #fff;
+}
+
+/* Responsividad general */
+@media (max-width: 900px) {
+  .yo-section, .mis-proyectos-section {
+    flex-direction: column !important;
+    width: 98% !important;
+    align-items: center;
+  }
+  .foto-yo, .yo-texto {
+    width: 90% !important;
+  }
+  .proyecto {
+    flex-direction: column !important;
+    width: 98% !important;
+  }
+  .foto-proyecto, .texto-proyecto {
+    width: 90% !important;
+  }
 }

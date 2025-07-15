@@ -2,7 +2,7 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     border: 1px solid white;
     border-radius: 20px;
@@ -31,3 +31,26 @@
     cursor: pointer;
     font-size: 1rem;
   }
+.tecnologias-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.7rem 0 1rem 0;
+}
+.chip-tecnologia {
+  background: #232323;
+  color: #0dd40d;
+  border: 1px solid #0dd40d;
+  border-radius: 12px;
+  padding: 0.18rem 0.8rem;
+  font-size: 0.95rem;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  transition: background 0.2s, color 0.2s;
+  user-select: none;
+}
+.chip-tecnologia:hover {
+  background: #0dd40d;
+  color: #232323;
+}

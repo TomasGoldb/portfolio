@@ -1,14 +1,21 @@
 .titulo{
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     color: #fff;
     text-align: center;
-    margin-top: 2rem;
-    font-weight: 600;
+    margin-top: 0.5rem;
+    font-weight: 700;
     width: 100%;
-    margin-bottom: 0;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
 }
 .titulo-section{
-    width: 45%;
+    width: 50%;
+    margin: 0 auto;
+    background: #232323;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,0.10);
+    padding: 2.5rem 2rem 2rem 2rem;
+    margin-bottom: 2.5rem;
 }
 .inverso{
     color: transparent;
@@ -71,15 +78,17 @@
 .button-container {
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
+  gap: 1.2rem;
+  margin-top: 1.5rem;
 }
 
 .descripcion {
     color: #c7c7c7;
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 1.2rem;
     width: 90%;
+    font-size: 1.15rem;
+    line-height: 1.6;
 }
 .green {
     color: #0dd40d;
@@ -87,7 +96,8 @@
 }
 
 .yo-section{
-  border: 1px solid #c7c7c7;
+  border: 1px solid #232323;
+  background: #232323;
   width: 80%;
   border-radius: 20px;
   display: flex;
@@ -95,6 +105,8 @@
   align-content: center;
   justify-content: space-around;
   align-items: center;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.10);
+  padding: 2rem 1.5rem;
 }
 .yo-section h2{
   color: #ffffff;
@@ -104,11 +116,34 @@
 }
 .yo-texto{
   width: 50%;
+  font-size: 1.1rem;
+  line-height: 1.7;
 }
 
 .foto-yo{
-  width: 40%;
+  width: 38%;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.10);
 }
+.proyecto{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 1%;
+    margin-bottom: 4%;
+    box-shadow: 0 4px 16px 0 rgba(0,0,0,0.15);
+    background: #232323;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.proyecto:hover {
+    transform: scale(1.01);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.25);
+}
+
 .mis-proyectos-section{
   display: flex;
   justify-content: space-around;
@@ -117,4 +152,9 @@
   flex-direction: row;
   margin-top: 4%;
   width: 80%;
+  gap: 2rem;
+}
+
+.titulo-section, .yo-section, .mis-proyectos-section {
+  margin-bottom: 2.5rem;
 }
