@@ -120,11 +120,62 @@
   line-height: 1.7;
 }
 
-.foto-yo{
-  width: 38%;
-  border-radius: 18px;
-  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.10);
+.blob-img-container {
+  position: relative;
+  width: 320px;
+  max-width: 90vw;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
 }
+.svg-blob {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.blob-yo img {
+  border-radius: 0;
+}
+.foto-yo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Blob recorte y animación con polygon */
+  clip-path: polygon(
+    50% 0%, 80% 10%, 100% 40%, 90% 80%, 60% 100%, 30% 90%, 0% 60%, 10% 20%
+  );
+  transition: box-shadow 0.4s;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
+  animation: blobPolygon 7s ease-in-out infinite alternate;
+}
+@keyframes blobPolygon {
+  0% {
+    clip-path: polygon(
+      50% 0%, 80% 10%, 100% 40%, 90% 80%, 60% 100%, 30% 90%, 0% 60%, 10% 20%
+    );
+  }
+  50% {
+    clip-path: polygon(
+      55% 5%, 85% 20%, 95% 45%, 80% 85%, 55% 95%, 25% 85%, 5% 60%, 15% 25%
+    );
+  }
+  100% {
+    clip-path: polygon(
+      50% 0%, 80% 10%, 100% 40%, 90% 80%, 60% 100%, 30% 90%, 0% 60%, 10% 20%
+    );
+  }
+}
+@media (max-width: 900px) {
+  .blob-img-container {
+    width: 70vw;
+    min-width: 180px;
+    max-width: 95vw;
+    margin: 0 auto 2rem auto;
+  }
+}
+
 .proyecto{
     width: 100%;
     display: flex;
@@ -157,4 +208,48 @@
 
 .titulo-section, .yo-section, .mis-proyectos-section {
   margin-bottom: 2.5rem;
+}
+
+.mis-proyectos-title{
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.scroll-top-btn {
+  position: fixed;
+  bottom: 2.2rem;
+  right: 2.2rem;
+  z-index: 100;
+  background: #0dd40d;
+  color: #232323;
+  border: 1.5px solid #0dd40d;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: none;
+  transition: background 0.18s, color 0.18s, border 0.18s, transform 0.18s;
+}
+.scroll-top-btn:hover {
+  background: #232323;
+  color: #0dd40d;
+  border: 1.5px solid #0dd40d;
+  transform: scale(1.08);
+}
+@media (max-width: 700px) {
+  .scroll-top-btn {
+    bottom: 1.1rem;
+    right: 1.1rem;
+    width: 44px;
+    height: 44px;
+    font-size: 1.5rem;
+  }
 }

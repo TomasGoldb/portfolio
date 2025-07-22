@@ -1,7 +1,17 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Header.css'
 
 export default function Header() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 40);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const handleScroll = (section) => (e) => {
     e.preventDefault();
     const el = document.querySelector(section);
@@ -19,7 +29,7 @@ export default function Header() {
   };
 
   return (
-    <header className='header'>
+    <header className={`header${scrolled ? ' header-scrolled' : ''}`}>
       <nav className='nav'>
         <ul className='ul-list'>
           <li><a className='link' href="#" onClick={handleScroll('.titulo-section')}>Sobre mí</a></li>

@@ -1,4 +1,10 @@
 .header{
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background: #222;
   width: 30%;
   margin: 0 auto;
   border-radius: 20px;
@@ -9,6 +15,11 @@
   align-content: center;
   flex-direction: column;
   flex-wrap: nowrap;
+}
+.header-scrolled {
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.18);
+  transition: border 0.3s ease-in-out;
+  border: 1px solid #0dd40d;
 }
 .ul-list {
   width: 100%;
