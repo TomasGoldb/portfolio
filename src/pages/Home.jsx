@@ -39,7 +39,7 @@ export default function Home() {
   };
 
   const handleContactar = () => {
-    window.open('mailto:tuemail@ejemplo.com', '_blank');
+    window.open('contactotomasgoldberg@gmail.com', '_blank');
   };
 
   const [showScroll, setShowScroll] = useState(false);
