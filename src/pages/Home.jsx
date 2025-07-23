@@ -61,7 +61,7 @@ export default function Home() {
             desarrollador full stack <span className='green'>/&gt;</span>
           </h1>
           <p className='descripcion'>
-            Soy un <span className='green'>full stack developer</span> con experiencia en la creación de aplicaciones web y móviles modernas y escalables.
+            <span className='green'>Full stack developer</span> con experiencia en la creación de aplicaciones web y móviles modernas y escalables.
           </p>
           <div className='button-container'>
             <button className='btn' onClick={handleVerProyectos}>Ver Proyectos</button>
